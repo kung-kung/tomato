@@ -1,0 +1,121 @@
+@charset "utf-8";
+@font-face {
+    font-family: "tomato";
+    src: url("../font/고령딸기체+TTF.ttf");
+}
+
+.loader {
+    position:fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    width:100%; 
+    height: 100%; 
+    background: white;
+}
+
+.loader .inner {
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    height:80px; 
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    z-index: 50;
+}
+
+.loader h1 {
+    animation: wave 5s 1s both linear;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 90 240 300' preserveAspectRatio='none'%3E%3Crect x='0' y='0' width='500' height='800' style='stroke: none; fill: rgb(255,0,0);' /%3E%3Cpath d='M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z' style='stroke: none;'%3E%3C/path%3E%3C/svg%3E");
+    height: 160px;
+    margin: 0; 
+    padding: 0; 
+    font-size: 66px; 
+    font-family: "tomato";
+    color: rgba(255, 255, 255,.1); 
+    background-size: 101% 100%; 
+    background-position: left 0px bottom -40px;
+    background-repeat: repeat-x;
+    -webkit-background-clip: text; 
+    -moz-background-clip: text; 
+    background-clip: text;
+    position: absolute;
+}
+@keyframes wave {
+    0% {
+        background-position: left 0px bottom -80px;
+    }
+    100% { 
+        background-position: left 1500px bottom 20px;
+    }
+}
+
+.m{
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid; */
+    position: relative;
+}
+.m li{
+    display: none;
+    position: absolute;
+}
+.m1{
+    left: 10px;
+    bottom: 100px;
+}
+.m1 img{
+    filter: blur(1px);
+    width: 70%;
+}
+.m2{
+    left: 210px;
+    bottom: 400px;
+}
+.m2 img{
+    filter: blur(1px);
+    width: 60%;
+}
+.m3{
+    left: 740px;
+    top: -200px
+}
+.m3 img{
+    width: 70%;
+    filter: blur(1px);
+}
+.m4{
+    right: -650px;
+    bottom: 50px;
+}
+.m4 img{
+    width: 70%;
+    filter: blur(1px);
+}
+.more{
+    display: block;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translatex(-50%);
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 20px;
+    background-color: red;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    box-shadow: 2px 2px 2px #333;
+    transition: all .5s;
+}
+.more:hover{
+    box-shadow:1px 1px 1px #333, inset 1px 1px 1px #333;
+}
+.more:active{
+    box-shadow: inset 2px 2px 2px #333;
+}
